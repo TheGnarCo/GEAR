@@ -48,7 +48,6 @@ group :development, :test do
   gem "axe-core-rspec"
   gem "bullet"
   gem "bundler-audit"
-  gem "debug", platforms: [:mri, :mingw, :x64_mingw]
   gem "dotenv-rails"
   gem "factory_bot_rails"
   gem "gnar-style", require: false
