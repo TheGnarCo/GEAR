@@ -33,8 +33,7 @@ Dir[Rails.root.join("spec", "support", "**", "*.rb")].each { |f| require f }
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e
-  puts e.to_s.strip
-  exit 1
+  abort e.to_s.strip
 end
 RSpec.configure do |config|
   if Bullet.enable?
@@ -54,6 +53,9 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 
+  # You can uncomment this line to turn off ActiveRecord support entirely.
+  # config.use_active_record = false
+
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
@@ -61,7 +63,7 @@ RSpec.configure do |config|
   # You can disable this behaviour by removing the line below, and instead
   # explicitly tag your specs with their type, e.g.:
   #
-  #     RSpec.describe UsersController, :type => :controller do
+  #     RSpec.describe UsersController, type: :controller do
   #       # ...
   #     end
   #
@@ -73,9 +75,24 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  config.include Devise::Test::IntegrationHelpers, type: :system
+  config.include Devise::Test::IntegrationHelpers, type: :request
 end
 
 Capybara.default_max_wait_time = 3
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+  provider: "google_oauth2",
+  uid: "12345",
+  info: OmniAuth::AuthHash::InfoHash.new(
+    {
+      email: "test@example.com",
+      uid: "12345",
+      provider: "example.com",
+    },
+  ),
+})
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
