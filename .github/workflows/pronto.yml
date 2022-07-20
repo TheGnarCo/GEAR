@@ -16,8 +16,8 @@ jobs:
 
       - name: Setup Ruby and install gems
         uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
+
+      - run: gem install pronto pronto-rubocop pronto-brakeman
 
       - name: Run Pronto
         env:
