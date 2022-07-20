@@ -24,24 +24,24 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Ruby
-          uses: ruby/setup-ruby@v1
-          with:
-            bundler-cache: true
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
 
-        - name: Setup Node
-          uses: actions/setup-node@v3
-          with:
-            node-version: 16
-            cache: 'yarn'
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
 
-        - name: Setup App Dependencies
-          shell: bash
-          run: bin/setup
+      - name: Setup App Dependencies
+        shell: bash
+        run: bin/setup
 
-        - name: Generate Assets
-          shell: bash
-          run: bin/rails assets:precompile
+      - name: Generate Assets
+        shell: bash
+        run: bin/rails assets:precompile
 
-        - name: Run tests
-          shell: bash
-          run: bin/rspec
+      - name: Run tests
+        shell: bash
+        run: bin/rspec
