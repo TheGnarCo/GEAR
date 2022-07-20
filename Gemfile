@@ -58,9 +58,6 @@ group :development, :test do
   gem "launchy"
   gem "lol_dba"
   gem "okcomputer"
-  gem "pronto"
-  gem "pronto-brakeman", require: false
-  gem "pronto-rubocop", require: false
   gem "pry-byebug"
   gem "pry-rails"
   gem "rspec-its"
