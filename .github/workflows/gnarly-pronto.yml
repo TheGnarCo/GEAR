@@ -1,5 +1,6 @@
-name: Gnar Pronto
+name: Gnarly Pronto
 on: [pull_request_target]
+
 jobs:
   pronto:
     runs-on: ubuntu-latest
@@ -7,10 +8,13 @@ jobs:
       - uses: actions/checkout@v3
       - run: |
           git fetch --no-tags --prune --depth=10 origin +refs/heads/*:refs/remotes/origin/*
+
       - name: Setup Ruby and install gems
         uses: ruby/setup-ruby@v1
+
       - name: Setup Pronto
         run: gem install pronto pronto-rubocop pronto-brakeman
+
       - name: Run Pronto
         env:
           PRONTO_PULL_REQUEST_ID: ${{ github.event.pull_request.number }}

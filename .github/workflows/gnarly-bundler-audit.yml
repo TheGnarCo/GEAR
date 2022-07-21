@@ -1,9 +1,9 @@
-name: Gnar Bundler Audit
+name: Gnarly Bundler Audit
 on:
   pull_request_target:
   push:
-    branches:
-      - main
+    branches: [main]
+
 jobs:
   audit:
     runs-on: ubuntu-latest
