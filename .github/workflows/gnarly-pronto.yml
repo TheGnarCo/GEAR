@@ -1,4 +1,4 @@
-name: Gnarly Pronto
+name: Pronto
 on: [pull_request_target]
 
 jobs:

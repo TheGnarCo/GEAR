@@ -1,4 +1,4 @@
-name: Gnarly Bundler Audit
+name: Bundler Audit
 on:
   pull_request_target:
   push:
