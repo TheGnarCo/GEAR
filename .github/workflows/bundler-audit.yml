@@ -1,7 +1,5 @@
 name: Gnar Bundler Audit
-on:
-  push:
-    branches: ["main"]
+on: [pull_request_target]
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -10,8 +8,6 @@ jobs:
 
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
-      with:
-        bundler-cache: true
 
     - run: |
         gem install bundle-audit
