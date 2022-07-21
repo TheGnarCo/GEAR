@@ -1,6 +1,6 @@
 name: Gnar Bundler Audit
 on:
-  pull_request_target
+  pull_request_target:
   push:
     branches:
       - main
