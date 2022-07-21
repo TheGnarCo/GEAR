@@ -3,7 +3,7 @@ on:
   pull_request_target
   push:
     branches:
-      - "main"
+      - main
 jobs:
   audit:
     runs-on: ubuntu-latest
