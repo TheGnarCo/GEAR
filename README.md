@@ -8,9 +8,8 @@ a 🥇 GILD production
 
 ## Getting Started
 
-1. `bundle install`
-2. `yarn install`
-3. `bin/dev`
+1. `bin/setup`
+1. `bin/dev`
 
 ## Heroku
 
