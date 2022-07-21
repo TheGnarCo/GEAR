@@ -1,9 +1,15 @@
 # ⚙️ GEAR ⚙️
-## The __Gnar Employee Asset Repository__
 
-Work In Progress! 
+## The _Gnar Employee Asset Repository_
+
+Work In Progress!
 
 a 🥇 GILD production
+
+## Getting Started
+
+1. `bin/setup`
+1. `bin/dev`
 
 ## Heroku
 
