@@ -17,4 +17,4 @@ jobs:
           PRONTO_GITHUB_SLUG: ${{ github.repository }}
           PRONTO_GITHUB_ACCESS_TOKEN: "${{ github.token }}"
         run: |
-          pronto run -f github_status github_pr -c origin/${{ github.base_ref }}
+          pronto run -f text github_status github_pr_review -c origin/${{ github.base_ref }}
