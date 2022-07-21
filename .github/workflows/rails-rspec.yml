@@ -46,4 +46,4 @@ jobs:
 
       - name: Run tests
         shell: bash
-        run: bin/rspec
+        run: bundle exec rspec
