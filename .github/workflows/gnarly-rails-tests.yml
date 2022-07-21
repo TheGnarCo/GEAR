@@ -42,7 +42,7 @@ jobs:
           node-version: 16
           cache: 'yarn'
 
-      - name: Setup App Dependencies
+      - name: Setup App
         shell: bash
         run: bin/setup
 
@@ -50,6 +50,6 @@ jobs:
         shell: bash
         run: bin/rails assets:precompile
 
-      - name: Run tests
+      - name: Run Rspec Tests
         shell: bash
         run: bundle exec rspec
