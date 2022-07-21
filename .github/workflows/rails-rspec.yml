@@ -1,9 +1,5 @@
 name: Gnar Rails Rspec
-on:
-  pull_request:
-    branches: ["main"]
-  push:
-    branches: ["main"]
+on: [pull_request_target]
 jobs:
   run-tests:
     runs-on: ubuntu-latest
