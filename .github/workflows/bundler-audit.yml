@@ -1,7 +1,7 @@
 name: Gnar Bundler Audit
 on:
   push:
-    branches: [$default-branch]
+    branches: ["main"]
 jobs:
   audit:
     runs-on: ubuntu-latest
