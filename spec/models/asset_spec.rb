@@ -9,7 +9,6 @@ RSpec.describe Asset, type: :model do
     it { should validate_presence_of(:model_number) }
     it { should validate_presence_of(:serial_number) }
     it { should validate_presence_of(:approximate_purchase_date) }
-    it { should validate_presence_of(:phone_number) }
   end
 
   describe "enums" do
