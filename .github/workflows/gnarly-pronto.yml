@@ -12,7 +12,7 @@ jobs:
       - name: Pronto Ruby
         uses: AdWerx/pronto-ruby@v4.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}kk
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           target: origin/${{ github.base_ref }}
           runners: >-
