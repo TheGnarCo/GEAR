@@ -14,5 +14,4 @@ class Asset < ApplicationRecord
   validates :model_number, presence: true
   validates :serial_number, presence: true
   validates :approximate_purchase_date, presence: true
-  validates :phone_number, presence: true
 end

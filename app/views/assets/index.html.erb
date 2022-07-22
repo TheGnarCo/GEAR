@@ -1,0 +1,13 @@
+<h1>⚙️ GEAR ⚙️</h1>
+<h2>The Gnar Employee Asset Repository</h2>
+<%= button_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post, data: { turbo: "false" } %>
+<%= link_to "Sign Out", destroy_user_session_path %>
+<table>
+  <thead>
+    <th>Type</th>
+    <th>Gnarnian</th>
+  </thead>
+  <tbody>
+    <%= render @assets %>
+  </tbody>
+</table>
