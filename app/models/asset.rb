@@ -9,7 +9,6 @@ class Asset < ApplicationRecord
     power_supply: 4,
     desk: 5,
     chair: 6,
-    other: 7,
   }
 
   validates :user_id, presence: true

@@ -23,7 +23,6 @@ RSpec.describe Asset, type: :model do
         power_supply: 4,
         desk: 5,
         chair: 6,
-        other: 7,
       })
     }
   end
