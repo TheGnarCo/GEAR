@@ -6,19 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: |
-          git fetch --no-tags --prune --depth=10 origin +refs/heads/*:refs/remotes/origin/*
+        with:
+          fetch-depth: 0
 
-      - name: Setup Ruby and install gems
-        uses: ruby/setup-ruby@v1
-
-      - name: Setup Pronto
-        run: gem install pronto pronto-rubocop pronto-brakeman
-
-      - name: Run Pronto
+      - name: Pronto Ruby
+        uses: AdWerx/pronto-ruby@v4.0
         env:
-          PRONTO_PULL_REQUEST_ID: ${{ github.event.pull_request.number }}
-          PRONTO_GITHUB_SLUG: ${{ github.repository }}
-          PRONTO_GITHUB_ACCESS_TOKEN: "${{ github.token }}"
-        run: |
-          pronto run -f text github_status github_pr_review -c origin/${{ github.base_ref }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}kk
+        with:
+          runners: >-
+            rubocop rails_schema brakeman bundler_audit rails_best_practices fasterer
