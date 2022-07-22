@@ -29,4 +29,8 @@ class AssetsController < AuthenticatedController
     puts "hello"
     puts "hello"
   end
+
+  def BadNameOfMethod
+    puts "Ain't I a stinker"
+  end
 end
