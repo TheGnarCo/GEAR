@@ -14,17 +14,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_21_201913) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "asset_types", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_asset_types_on_name", unique: true
-  end
-
   create_table "assets", force: :cascade do |t|
     t.date "approximate_purchase_date", null: false
-    t.string "asset_type", default: "laptop", null: false
+    t.string "asset_type", default: "unknown", null: false
     t.string "mac_address"
     t.string "model_number", null: false
     t.string "phone_number", null: false
