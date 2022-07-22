@@ -39,7 +39,7 @@ jobs:
         if: steps.check_files.outputs.files_exists == 'true'
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           cache: 'yarn'
 
       - name: Setup App
@@ -53,3 +53,7 @@ jobs:
       - name: Run Rspec Tests
         shell: bash
         run: bundle exec rspec
+
+      - name: Run Yarn Tests
+        if: steps.check_files.outputs.files_exists == 'true'
+        run: yarn test
