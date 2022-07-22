@@ -24,12 +24,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_21_201913) do
 
   create_table "assets", force: :cascade do |t|
     t.date "approximate_purchase_date", null: false
-    t.integer "asset_type", default: 0, null: false
+    t.string "asset_type", default: "laptop", null: false
     t.string "mac_address"
     t.string "model_number", null: false
     t.string "phone_number", null: false
     t.string "serial_number", null: false
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_assets_on_user_id"
