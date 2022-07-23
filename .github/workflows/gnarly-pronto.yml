@@ -8,8 +8,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Gnar Style
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
+
+      - name: Install Gnar Style
         run: gem install gnar-style
 
       - name: Pronto Ruby
