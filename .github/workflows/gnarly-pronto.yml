@@ -11,16 +11,3 @@ jobs:
         with:
           fetch-depth: 0
       - uses: HeRoMo/pronto-action@v1.35.0
-        env:
-          PRONTO_PULL_REQUEST_ID: ${{ github.event.pull_request.number }}
-          PRONTO_GITHUB_SLUG: ${{ github.repository }}
-          PRONTO_GITHUB_ACCESS_TOKEN: "${{ github.token }}"
-        with:
-          runner:
-            - rubocop
-            - brakeman
-            - rails_best_practices
-          formatters:
-            - text
-            - github_status
-            - github_pr_review
