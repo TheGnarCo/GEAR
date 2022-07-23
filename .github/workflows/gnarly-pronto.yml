@@ -5,11 +5,14 @@ jobs:
   pronto:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Pronto Ruby
         uses: AdWerx/pronto-ruby@v4.0
-        with:
-          target: origin/main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          target: origin/${{ github.base_ref }}
+          runners: rubocop rails_schema brakeman bundler_audit rails_best_practices fasterer
