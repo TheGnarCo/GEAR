@@ -1,5 +1,7 @@
 name: Pronto
-on: [push, pull_request]
+on:
+  pull-request:
+  push: [main]
 
 jobs:
   pronto:
@@ -8,6 +10,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
+      - name: Install Gnar Style
 
       - name: Pronto Ruby
         uses: AdWerx/pronto-ruby@v4.0
