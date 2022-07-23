@@ -1,7 +1,14 @@
 AllCops:
   NewCops: enable
+  Exclude:
+    - db/schema.rb
+    - 'bin/**/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
 
-require: rubocop-performance
+require:
+  - rubocop-performance
+  - rubocop-rails
 
 Layout/ArgumentAlignment:
   EnforcedStyle: with_fixed_indentation
@@ -65,13 +72,6 @@ Style/TrailingCommaInArrayLiteral:
 
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
-
-AllCops:
-  Exclude:
-    - db/schema.rb
-    - 'bin/**/*'
-    - 'node_modules/**/*'
-    - 'vendor/**/*'
 
 Metrics/MethodLength:
   Exclude:
