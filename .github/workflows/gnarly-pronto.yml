@@ -12,4 +12,7 @@ jobs:
           fetch-depth: 0
       - uses: HeRoMo/pronto-action@v1.35.0
         with:
-          formatters: [ text, github_status, github_pr_review]
+          formatters:
+            - text
+            - github_status
+            - github_pr_review
