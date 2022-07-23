@@ -6,10 +6,10 @@ class User < ApplicationRecord
     data = access_token.info
     email = data["email"]
 
-    User.where(email: email).first_or_create(
+    User.where(email:).first_or_create(
       uid: access_token["uid"],
       provider: access_token["provider"],
-      email: email,
+      email:,
     )
   end
 end
