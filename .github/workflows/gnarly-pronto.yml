@@ -1,5 +1,6 @@
 name: Pronto
-on: [pull_request_target]
+on:
+  pull_request:
 jobs:
   pronto:
     runs-on: ubuntu-latest
