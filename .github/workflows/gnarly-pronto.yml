@@ -8,6 +8,8 @@ jobs:
         with:
           fetch-depth: 0
 
+      - run: git fetch origin main --depth=1
+
       - name: Pronto Ruby
         uses: AdWerx/pronto-ruby@v4.0
         env:
