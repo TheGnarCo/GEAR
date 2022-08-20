@@ -12,6 +12,5 @@ jobs:
           fetch-depth: 0
       - uses: HeRoMo/pronto-action@v1.36.0
         with:
-          github_token: ${{ secrets.GNARBOT_TOKEN }}
           runner: rubocop brakeman rails_best_practices erb_lint
           formatters: text github_status github_pr_review
