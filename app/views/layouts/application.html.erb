@@ -10,8 +10,11 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body class="bg-gray-500 flex items-center justify-center h-screen">
+  <body class="bg-orange-500 flex items-center justify-center h-screen">
     <%= yield %>
-    <%= render "layouts/flash" %>
+
+    <div class="">
+      <%= render "layouts/flash" %>
+    </div>
   </body>
 </html>
