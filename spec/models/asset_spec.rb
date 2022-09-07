@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe Asset, type: :model do
-  subject(:asset)
   describe "associations" do
     it { is_expected.to belong_to(:user) }
   end
@@ -23,7 +22,7 @@ RSpec.describe Asset, type: :model do
       chair: "chair",
     }
     it {
-      expect(asset)
+      expect(subject)
         .to define_enum_for(:asset_type)
         .with_values(enum_values)
         .backed_by_column_of_type(:string)
