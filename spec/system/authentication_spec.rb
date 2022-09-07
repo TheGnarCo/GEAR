@@ -6,7 +6,6 @@ RSpec.describe "Authentication", type: :system, js: true do
       visit new_user_session_path
 
       expect(page).to have_current_path(new_user_session_path)
-      expect(page).to have_text("Log in")
     end
   end
 end
