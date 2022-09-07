@@ -11,6 +11,8 @@ a 🥇 GILD production
 1. `scripts/setup`
 1. `scripts/dev`
 
+Note: `master.key` is not required for this app.
+
 ## Heroku
 
 ### Running Heroku locally
