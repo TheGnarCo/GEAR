@@ -16,7 +16,7 @@ RSpec.describe "Home Page", type: :system do
     let!(:asset_1) { create :asset, asset_type: "desk", user: }
     let!(:asset_2) { create :asset, user: other_user }
 
-    before :each do
+    before do
       login_as(user)
     end
 
