@@ -14,7 +14,7 @@ gem "pg", "~> 1.1"
 gem "puma", "~> 5.6"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem "redis", "~> 5.0"
-gem "sprockets-rails"
+gem "propshaft"
 gem "stimulus-rails"
 gem "turbo-rails"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
