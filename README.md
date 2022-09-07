@@ -8,8 +8,8 @@ a 🥇 GILD production
 
 ## Getting Started
 
-1. `bin/setup`
-1. `bin/dev`
+1. `scripts/setup`
+1. `scripts/dev`
 
 ## Heroku
 
