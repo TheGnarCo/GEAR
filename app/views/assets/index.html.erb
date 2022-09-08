@@ -1,12 +1,32 @@
-<h1>⚙️ GEAR ⚙️</h1>
-<h2>The Gnar Employee Asset Repository</h2>
-<%= link_to "Sign Out", destroy_user_session_path %>
-<table>
-  <thead>
-    <th>Type</th>
-    <th>Gnarnian</th>
-  </thead>
-  <tbody>
-    <%= render @assets %>
-  </tbody>
-</table>
+<div class="container flex flex-col h-screen w-auto text-center">
+  <%= render 'shared/header' %>
+  <div class="text-center">
+    <div class="flex flex-col">
+      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+          <div class="overflow-hidden">
+            <table class="table-auto">
+              <thead class="border-b bg-gray-800">
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                  Type
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                  Gnarnian
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                  Model Number
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                  Serial Number
+                </th>
+              </thead class="border-b">
+              <tbody>
+                <%= render @assets %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
