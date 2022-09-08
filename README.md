@@ -8,8 +8,8 @@ a 🥇 GILD production
 
 ## Getting Started
 
-1. `scripts/setup`
-1. `scripts/dev`
+1. `bin/setup`
+1. `bin/dev`
 
 Note: `master.key` is not required for this app.
 
