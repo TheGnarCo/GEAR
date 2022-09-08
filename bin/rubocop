@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+bundle exec rubocop $@
+echo "----------------------=GNAR=------------------------"
+echo "Regenerating rubocop_todo.yml with new exceptions..."
+echo "===================================================="
+bundle exec rubocop --regenerate-todo
