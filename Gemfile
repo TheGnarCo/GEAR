@@ -3,52 +3,52 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
-gem "bootsnap", require: false
-gem "cssbundling-rails"
-gem "devise"
-gem "jbuilder"
-gem "jsbundling-rails"
-gem "omniauth-google-oauth2"
-gem "omniauth-rails_csrf_protection", "~> 1.0"
+gem "bootsnap", "~> 1", require: false
+gem "cssbundling-rails", "~> 1"
+gem "devise", "~> 4"
+gem "jbuilder", "~> 2"
+gem "jsbundling-rails", "~> 1"
+gem "omniauth-google-oauth2", "~> 1"
+gem "omniauth-rails_csrf_protection", "~> 1"
 gem "pg", "~> 1.1"
-gem "propshaft"
+gem "propshaft", "~> 0"
 gem "puma", "~> 5.6"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
-gem "redis", "~> 5.0"
-gem "stimulus-rails"
-gem "turbo-rails"
+gem "redis", "~> 5"
+gem "stimulus-rails", "~> 1"
+gem "turbo-rails", "~> 1"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
-  gem "axe-core-capybara"
-  gem "axe-core-rspec"
-  gem "bullet"
-  gem "bundler-audit"
-  gem "dotenv-rails"
-  gem "factory_bot_rails"
-  gem "faker"
-  gem "launchy"
-  gem "lol_dba"
-  gem "okcomputer"
-  gem "pry-byebug"
-  gem "pry-rails"
-  gem "rspec-its"
+  gem "axe-core-capybara", "~> 4"
+  gem "axe-core-rspec", "~> 4"
+  gem "bullet", "~> 7"
+  gem "bundler-audit", "~> 0.9"
+  gem "dotenv-rails",  "~> 2"
+  gem "factory_bot_rails", "~> 6"
+  gem "faker", "~> 2"
+  gem "launchy", "~> 2"
+  gem "lol_dba", "~> 2"
+  gem "okcomputer", "~> 1"
+  gem "pry-byebug", "~> 3"
+  gem "pry-rails", "~> 0.3"
+  gem "rspec-its", "~> 1"
   gem "rspec-rails", "~> 6.0.0.rc1"
   gem "shoulda-matchers"
-  gem "simplecov", require: false
+  gem "simplecov", "~> 0.21", require: false
 end
 
 group :test do
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem 'webdrivers', '~> 5.0'
+  gem "capybara", "~> 3"
+  gem "selenium-webdriver", "~> 4"
+  gem "webdrivers", "~> 5.0"
 end
 
 group :development do
-  gem "foreman", "~> 0.87.2"
-  gem "rubocop", "~> 1.36"
-  gem "rubocop-performance", "~> 1.14"
-  gem "rubocop-rails", "~> 2.15"
-  gem "rubocop-rspec", "~> 2.12"
-  gem "web-console"
+  gem "foreman", "~> 0.87"
+  gem "rubocop", "~> 1"
+  gem "rubocop-performance", "~> 1"
+  gem "rubocop-rails", "~> 2"
+  gem "rubocop-rspec", "~> 2"
+  gem "web-console", "~> 4"
 end
