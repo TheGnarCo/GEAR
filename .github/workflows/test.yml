@@ -44,7 +44,7 @@ jobs:
 
       - name: Setup App
         shell: bash
-        run: scripts/setup
+        run: bin/setup
 
       - name: Generate Assets
         shell: bash
