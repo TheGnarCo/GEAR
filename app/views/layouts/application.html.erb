@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GEAR</title>
+    <title>GEAR - The Gnar Employee Asset Repository</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload" , defer: true %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-
-  <body class="bg-orange-500 flex justify-center">
-      <%= yield %>
-    </div>
-
-    <%= render "layouts/flash" %>
+  <body class="font-sans leading-normal tracking-normal mt-12">
+    <%= render 'shared/header' %>
+    <main>
+      <div class="flex flex-col md:flex-row">
+        <%= render 'shared/nav' %>
+        <section>
+          <%= yield %>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
