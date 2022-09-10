@@ -1,4 +1,4 @@
-# ⚙️ GEAR ⚙️
+# ⚙️ G.E.A.R. ⚙️
 
 ## The _Gnar Employee Asset Repository_
 
