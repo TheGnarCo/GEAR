@@ -28,7 +28,6 @@
   jon
 ].map do |email_slug|
   email = "#{email_slug}@gnar.dog"
-  puts "Creating #{email}"
   User.where(email:).first_or_create
 end
 
