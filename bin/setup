@@ -31,6 +31,9 @@ FileUtils.chdir APP_ROOT do
   puts "\n== Compile JS + CSS assets"
   system! "bin/rails assets:precompile"
 
+  puts "\n== Seed Database"
+  system! "bin/rails db:seed"
+
   puts "\n== Restarting application server =="
   system! "bin/rails restart"
 end
