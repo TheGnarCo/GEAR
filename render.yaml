@@ -14,5 +14,3 @@ services:
         fromDatabase:
           name: gear
           property: connectionString
-      - key: RAILS_MASTER_KEY
-        sync: false
