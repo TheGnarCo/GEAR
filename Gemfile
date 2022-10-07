@@ -10,10 +10,10 @@ gem "jbuilder", "~> 2"
 gem "jsbundling-rails", "~> 1"
 gem "omniauth-google-oauth2", "~> 1"
 gem "omniauth-rails_csrf_protection", "~> 1"
-gem "pg", "~> 1.1"
+gem "pg", "~> 1"
 gem "propshaft", "~> 0"
-gem "puma", "~> 5.6"
-gem "rails", "~> 7.0.2", ">= 7.0.2.3"
+gem "puma", "~> 5"
+gem "rails", "~> 7"
 gem "redis", "~> 5"
 gem "stimulus-rails", "~> 1"
 gem "turbo-rails", "~> 1"
@@ -23,7 +23,7 @@ group :development, :test do
   gem "axe-core-capybara", "~> 4"
   gem "axe-core-rspec", "~> 4"
   gem "bullet", "~> 7"
-  gem "bundler-audit", "~> 0.9"
+  gem "bundler-audit", "~> 0"
   gem "dotenv-rails",  "~> 2"
   gem "factory_bot_rails", "~> 6"
   gem "faker", "~> 2"
@@ -31,11 +31,11 @@ group :development, :test do
   gem "lol_dba", "~> 2"
   gem "okcomputer", "~> 1"
   gem "pry-byebug", "~> 3"
-  gem "pry-rails", "~> 0.3"
+  gem "pry-rails", "~> 0"
   gem "rspec-its", "~> 1"
   gem "rspec-rails", "~> 6.0.0.rc1"
   gem "shoulda-matchers"
-  gem "simplecov", "~> 0.21", require: false
+  gem "simplecov", "~> 0", require: false
 end
 
 group :test do
