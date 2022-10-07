@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_22_191534) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_07_182854) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  # Custom types defined in this database.
+  # Note that some types may not work with other database engines. Be careful if changing database.
+  create_enum "asset_type_enum", ["laptop", "display", "keyboard", "mouse", "power supply", "desk", "chair"]
+
   create_table "assets", force: :cascade do |t|
     t.date "approximate_purchase_date", null: false
-    t.string "asset_type", default: "unknown", null: false
     t.string "mac_address"
     t.string "model_number", null: false
     t.string "phone_number"
@@ -24,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_22_191534) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.enum "asset_type", default: "laptop", enum_type: "asset_type_enum"
     t.index ["user_id"], name: "index_assets_on_user_id"
   end
 
