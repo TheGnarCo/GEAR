@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Asset, type: :model do
+RSpec.describe Gnar::Asset, type: :model do
   describe "associations" do
     it { is_expected.to belong_to(:user) }
   end
@@ -12,6 +12,8 @@ RSpec.describe Asset, type: :model do
   end
 
   describe "enums" do
+    subject(:asset) { create(:asset) }
+
     enum_values = {
       laptop: "laptop",
       display: "display",
@@ -21,10 +23,11 @@ RSpec.describe Asset, type: :model do
       desk: "desk",
       chair: "chair",
     }
+
     it do
-       should define_enum_for(:asset_type)
-         .with_values(enum_values)
-         .backed_by_column_of_type(:enum)
+      expect(asset).to define_enum_for(:asset_type)
+        .with_values(enum_values)
+        .backed_by_column_of_type(:enum)
     end
   end
 end
