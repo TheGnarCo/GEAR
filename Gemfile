@@ -34,7 +34,7 @@ group :development, :test do
   gem "pry-byebug", "~> 3"
   gem "pry-rails", "~> 0"
   gem "rspec-its", "~> 1"
-  gem "rspec-rails", "~> 6.0.0"
+  gem "rspec-rails", "~> 6.0.1"
   gem "shoulda-matchers"
   gem "simplecov", "~> 0", require: false
 end
