@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "gnar/assets#index"
+
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
   devise_scope :user do
@@ -6,5 +8,7 @@ Rails.application.routes.draw do
     get "sign_out", to: "devise/sessions#destroy", as: :destroy_user_session
   end
 
-  root "assets#index"
+  namespace :gnar do
+    resources :assets, only: [:index]
+  end
 end
