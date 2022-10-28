@@ -9,7 +9,7 @@ class User < ApplicationRecord
     User.where(email:).first_or_create(
       uid: access_token["uid"],
       provider: access_token["provider"],
-      email:,
+      email:
     )
   end
 end

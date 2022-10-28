@@ -47,6 +47,7 @@ end
 
 group :development do
   gem "foreman", "~> 0.87"
+  gem "prettier"
   gem "rubocop", "~> 1"
   gem "rubocop-performance", "~> 1"
   gem "rubocop-rails", "~> 2"

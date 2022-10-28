@@ -11,7 +11,7 @@
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns, IgnoredPatterns.
 # URISchemes: http, https
 Layout/LineLength:
-  Max: 154
+  Max: 100
 
 # Offense count: 1
 RSpec/MultipleExpectations:
@@ -21,7 +21,7 @@ RSpec/MultipleExpectations:
 # Configuration parameters: IgnoreSharedExamples.
 RSpec/NamedSubject:
   Exclude:
-    - 'spec/models/asset_spec.rb'
+    - "spec/models/asset_spec.rb"
 
 # Offense count: 2
 # Configuration parameters: Database, Include.
@@ -29,5 +29,5 @@ RSpec/NamedSubject:
 # Include: db/migrate/*.rb
 Rails/BulkChangeTable:
   Exclude:
-    - 'db/migrate/20220407201654_add_omniauth_to_users.rb'
-    - 'db/migrate/20220408185317_remove_email_password_sign_in_exclusive_columns.rb'
+    - "db/migrate/20220407201654_add_omniauth_to_users.rb"
+    - "db/migrate/20220408185317_remove_email_password_sign_in_exclusive_columns.rb"
