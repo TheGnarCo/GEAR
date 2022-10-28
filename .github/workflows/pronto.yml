@@ -11,7 +11,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: gem install prettier
+      - run: bundle install prettier
 
       - uses: HeRoMo/pronto-action@v1.38.0
         with:
