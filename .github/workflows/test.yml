@@ -45,8 +45,6 @@ jobs:
           cache: "yarn"
 
       - name: Run Ruby Tests
-        env:
-          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         run: |
           bin/setup
           bin/rails assets:precompile
