@@ -12,6 +12,10 @@ a 🥇 GILD production
 1. `bin/setup`
 1. `bin/dev`
 
+## Secrets
+
+GEAR embraces the [Rails 7 Credentials System](https://edgeguides.rubyonrails.org/security.html#custom-credentials). Once you have the `config/master.key`,
+
 ## Hosting
 
 GEAR is automatically deployed as a result of successful checks running on `MAIN` following a merge.
