@@ -8,17 +8,14 @@ a 🥇 GILD production
 
 ## Getting Started
 
+1. Acquire the `config/master.key` file from a trusted associate.
 1. `bin/setup`
 1. `bin/dev`
 
-Note: `master.key` is not required for this app.
+## Hosting
 
-## Heroku
+GEAR is automatically deployed as a result of successful checks running on `MAIN` following a merge.
 
-### Running Heroku locally
+GEAR is currently hosted on `render.com`, and a live version (on the free tier - sorry for slow loads!) can be found [here](https://gear-sa2b.onrender.com/)!
 
-Use Procfile.dev and .env.development when running `heroku local`. For example:
-
-```
-heroku local -f Procfile.dev -e .env.development
-```
+For more information, check out the [`render.yaml`](/render.yaml).
