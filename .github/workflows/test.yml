@@ -10,6 +10,7 @@ jobs:
     env:
       RAILS_ENV: test
       DATABASE_PASSWORD: password
+      RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
     services:
       postgres:
         image: postgres:14
@@ -43,18 +44,14 @@ jobs:
           node-version: 18
           cache: "yarn"
 
-      - name: Setup App
-        shell: bash
-        run: bin/setup
-
-      - name: Generate Assets
-        shell: bash
-        run: bin/rails assets:precompile
-
       - name: Run Ruby Tests
-        shell: bash
-        run: bundle exec rspec
+        run: |
+          bin/setup
+          bin/rails assets:precompile
+          bundle exec rspec
 
       - name: Run JS Tests
         if: steps.check_files.outputs.files_exists == 'true'
+        env:
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         run: npm run test --if-present

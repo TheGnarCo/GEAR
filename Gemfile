@@ -25,7 +25,6 @@ group :development, :test do
   gem "axe-core-rspec", "~> 4"
   gem "bullet", "~> 7"
   gem "bundler-audit", "~> 0"
-  gem "dotenv-rails",  "~> 2"
   gem "factory_bot_rails", "~> 6"
   gem "faker", "~> 2"
   gem "launchy", "~> 2"
