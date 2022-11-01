@@ -14,7 +14,11 @@ a 🥇 GILD production
 
 ## Secrets
 
-GEAR embraces the [Rails 7 Credentials System](https://edgeguides.rubyonrails.org/security.html#custom-credentials). Once you have the `config/master.key`,
+GEAR embraces the [Rails 7 Credentials System](https://edgeguides.rubyonrails.org/security.html#custom-credentials).
+
+Once you have the `config/master.key`, you can run `bin/rails credentials:edit` to view and change the rails secrets.
+
+(As a reminder: This will change the `credentials.enc.yml` file, which is checked into git.)
 
 ## Hosting
 
