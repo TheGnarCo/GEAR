@@ -46,16 +46,24 @@ jobs:
 
       - name: Setup App
         shell: bash
+        env:
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         run: bin/setup
 
       - name: Generate Assets
         shell: bash
+        env:
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         run: bin/rails assets:precompile
 
       - name: Run Ruby Tests
         shell: bash
+        env:
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         run: bundle exec rspec
 
       - name: Run JS Tests
         if: steps.check_files.outputs.files_exists == 'true'
+        env:
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         run: npm run test --if-present
