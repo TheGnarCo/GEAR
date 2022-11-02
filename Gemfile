@@ -26,7 +26,7 @@ group :development, :test do
   gem "bullet", "~> 7"
   gem "bundler-audit", "~> 0"
   gem "factory_bot_rails", "~> 6"
-  gem "faker", "~> 2"
+  gem "faker", "~> 3"
   gem "launchy", "~> 2"
   gem "lol_dba", "~> 2"
   gem "okcomputer", "~> 1"
