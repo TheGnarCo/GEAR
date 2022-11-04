@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   devise :registerable, :omniauthable, omniauth_providers: [:google_oauth2]
-  validates :email, presence: true
+
+  has_many :assets, dependent: :nullify, class_name: "Gnar::Asset"
+
+  validates :email, presence: true, uniqueness: true
 
   def self.from_omniauth(access_token)
     data = access_token.info

@@ -1,12 +1,10 @@
 <nav aria-label="alternative nav">
-  <div
-class="bg-orange-500 shadow-xl h-20 fixed bottom-0 md:relative md:h-full z-10 w-full md:w-48 content-center">
-    <div
-class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start h-full text-left justify-between">
-      <ul
-class="list-reset flex flex-row md:flex-col pt-3 md:py-12 px-1 md:px-2 md:h-full md:justify-end text-center md:text-left">
-        <%= render 'shared/nav_item', url: "#", text: "Add an Asset"%>
-        <%= render 'shared/nav_item', url: "#", text: "Add a Gnarnian"%>
+  <div class="bg-orange-500 shadow-xl h-20 fixed bottom-0 md:relative md:h-full z-10 w-full md:w-48 content-center">
+    <div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start h-full text-left justify-between">
+      <ul class="list-reset flex flex-row md:flex-col pt-3 md:py-12 px-1 md:px-2 md:h-full md:justify-end text-center md:text-left">
+        <%= render 'shared/nav_item', url: gnar_assets_path, text: "Assets"%>
+
+        <%= render 'shared/nav_item', url: gnar_users_path, text: "Gnarnians"%>
       </ul>
     </div>
   </div>

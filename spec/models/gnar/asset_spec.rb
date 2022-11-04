@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Gnar::Asset, type: :model do
+RSpec.describe Gnar::Asset do
   describe "associations" do
     it { is_expected.to belong_to(:user) }
   end
