@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Authentication", type: :system, js: true do
+RSpec.describe "Authentication", js: true do
   context "when not required" do
     it "allows navigation" do
       visit new_user_session_path

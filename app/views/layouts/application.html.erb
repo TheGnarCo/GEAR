@@ -2,17 +2,25 @@
 <html>
   <head>
     <title>G.E.A.R. - The Gnar Employee Asset Repository</title>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <%= csrf_meta_tags %>
+
     <%= csp_meta_tag %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload" , defer: true %>
+
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
+
   <body class="font-sans leading-normal tracking-normal mt-12 overflow-y-hidden">
     <%= render 'shared/header' %>
+
     <main>
       <div class="flex flex-col md:flex-row">
         <%= render 'shared/nav' %>
+
         <section class="w-screen">
           <div id="main" class="main-content flex-1 bg-gray-100 w-full mt-3 md:mt-2 pb-24 md:pb-5">
             <div class="bg-orange-500">
@@ -20,6 +28,7 @@
                 <h1 class="font-bold pl-2"><%= yield :title %></h1>
               </div>
             </div>
+
             <div class="flex flex-wrap">
               <%= yield %>
             </div>

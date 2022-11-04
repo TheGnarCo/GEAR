@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Home Page", type: :system do
+RSpec.describe "Home Page" do
   context "with unauthenticated visit" do
     it "redirects user to sign in" do
       visit root_path
@@ -10,10 +10,10 @@ RSpec.describe "Home Page", type: :system do
   end
 
   context "with authenticated visit" do
-    let!(:user) { create :user }
-    let!(:other_user) { create :user }
-    let!(:asset_one) { create :asset, asset_type: "desk", user: }
-    let!(:asset_two) { create :asset, user: other_user }
+    let!(:user) { create(:user) }
+    let!(:other_user) { create(:user) }
+    let!(:asset_one) { create(:asset, asset_type: "desk", user:) }
+    let!(:asset_two) { create(:asset, user: other_user) }
 
     before do
       login_as(user)

@@ -1,0 +1,5 @@
+<%= link_to "Back to Gnarnians", gnar_users_path %>
+
+<%= turbo_frame_tag "new_user_frame" do %>
+  <%= render "new_form", user: @user %>
+<% end %>
