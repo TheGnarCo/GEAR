@@ -28,6 +28,9 @@ Layout/MultilineMethodCallIndentation:
 Layout/LineLength:
   Max: 100
   Severity: refactor
+  Exclude:
+    - "config/initializers/devise.rb"
+    - "db/migrate/**/*"
 
 Metrics/BlockLength:
   CountAsOne: ["hash", "array", "heredoc"]
@@ -40,6 +43,7 @@ Metrics/ModuleLength:
     - "spec/**/*"
 
 Metrics/MethodLength:
+  Max: 15
   CountAsOne: ["hash", "array", "heredoc"]
   Exclude:
     - "db/migrate/**/*"
@@ -83,5 +87,20 @@ Style/TrailingCommaInArrayLiteral:
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 
+Rails/BulkChangeTable:
+  Enabled: false
+
+Rails/I18nLocaleTexts:
+  Enabled: false
+
 Rails/NotNullColumn:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
   Enabled: false
