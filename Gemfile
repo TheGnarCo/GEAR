@@ -52,3 +52,5 @@ group :development do
   gem "rubocop-rspec", "~> 2"
   gem "web-console", "~> 4"
 end
+
+gem "dartsass-rails", "~> 0.4.0"

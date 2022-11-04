@@ -1,0 +1,36 @@
+@import "colors";
+
+.button {
+  border-radius: 20px;
+  border: none;
+  display: inline-block;
+  font-family: $body-font;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 15px 11px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.25s ease-in-out 0s, border-color, color;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.standard {
+    background: $gnar-blue;
+    color: $white;
+
+    &:hover {
+      background: $gnar-blue-dark;
+    }
+  }
+
+  &.special {
+    background: $gnar-orange;
+    color: $white;
+
+    &:hover {
+      background: $gnar-orange-dark;
+    }
+  }
+}

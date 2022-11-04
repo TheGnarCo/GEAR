@@ -1,0 +1,50 @@
+@import "colors";
+@import "util";
+
+.global-header {
+  align-items: center;
+  background-color: $gnar-orange;
+  box-shadow: $box-shadow;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  width: 100vw;
+}
+
+.global-nav {
+  height: 100%;
+  width: 90%;
+
+  ul {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  li {
+    list-style: none;
+    padding: 27px 0;
+    text-align: center;
+    width: 90px;
+
+    a {
+      box-sizing: border-box;
+      color: $white;
+      display: block;
+      font-size: 18px;
+      height: 100%;
+      padding: 10px 0;
+      width: 100%;
+    }
+
+    &.home-link {
+      padding: 0;
+
+      a {
+        background: url("logo-gnar.svg") center center no-repeat;
+        width: 100%;
+      }
+    }
+  }
+}

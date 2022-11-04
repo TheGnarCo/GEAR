@@ -1,19 +1,15 @@
-<header>
-  <!--Nav-->
-  <nav aria-label="menu nav" class="bg-orange-500 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
-    <div class="flex flex-wrap w-full items-center justify-between">
-      <div class="flex flex-shrink md:w-1/2 justify-center md:justify-start text-white">
-        <a href="/" aria-label="Home">
-          <span class="text-5xl pl-2">⚙️</span>
-        </a>
-      </div>
-      <div class="flex pt-2 content-center justify-between md:w-1/2 md:justify-end">
-        <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
-          <li class="flex-1 md:flex-none md:mr-3">
-            <%= link_to "Sign Out", destroy_user_session_path , class: "px-6 py-3 text-white no-underline bg-blue-800 rounded hover:bg-blue-500" %>
-          </li>
-        </ul>
-      </div>
-    </div>
+<header class="global-header">
+  <nav aria-label="menu nav" class="global-nav">
+    <ul>
+      <li class="home-link">
+        <%= link_to "", root_path %>
+      </li>
+
+      <%= render "shared/nav_item", url: gnar_assets_path, text: "Assets"%>
+
+      <%= render "shared/nav_item", url: gnar_users_path, text: "Gnarnians"%>
+
+      <%= render "shared/nav_item", url: destroy_user_session_path, text: "Sign Out" %>
+    </ul>
   </nav>
 </header>

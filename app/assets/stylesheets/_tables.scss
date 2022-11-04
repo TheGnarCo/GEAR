@@ -1,0 +1,31 @@
+@import "colors";
+@import "util";
+
+table {
+  border-collapse: collapse;
+  box-shadow: $box-shadow;
+  color: $slate;
+  font-family: $body-font;
+  min-width: 50vw;
+
+  tr {
+    background-color: $gnar-yellow;
+
+    &:nth-child(even) {
+      background-color: $gnar-yellow-light;
+    }
+  }
+
+  th,
+  td {
+    padding: 10px 20px;
+  }
+
+  th {
+    background-color: $gnar-blue;
+    color: $white;
+    font-weight: 400;
+    text-align: left;
+    white-space: nowrap;
+  }
+}

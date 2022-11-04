@@ -12,14 +12,14 @@ describe "Viewing users" do
     visit gnar_users_path
 
     users = all(".user")
-    expect(users[0].find(".first-name")).to have_text "Lisa"
-    expect(users[0].find(".last-name")).to have_text "Wagner"
-    expect(users[0].find(".email")).to have_text "lisa-wagner@example.com"
-    expect(users[1].find(".first-name")).to have_text "Pete"
-    expect(users[1].find(".last-name")).to have_text "Weber"
-    expect(users[1].find(".email")).to have_text "pete-weber@example.com"
-    expect(users[2].find(".first-name")).to have_text "W.R."
-    expect(users[2].find(".last-name")).to have_text "Williams"
-    expect(users[2].find(".email")).to have_text "wr-williams@example.com"
+    expect(users[0]).to have_text "Lisa"
+    expect(users[0]).to have_text "Wagner"
+    expect(users[0]).to have_text "lisa-wagner@example.com"
+    expect(users[1]).to have_text "Pete"
+    expect(users[1]).to have_text "Weber"
+    expect(users[1]).to have_text "pete-weber@example.com"
+    expect(users[2]).to have_text "W.R."
+    expect(users[2]).to have_text "Williams"
+    expect(users[2]).to have_text "wr-williams@example.com"
   end
 end

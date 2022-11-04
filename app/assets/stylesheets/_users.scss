@@ -1,0 +1,24 @@
+.users-layout {
+  display: flex;
+}
+
+.button.add-gnarnian {
+  margin: 0 15px;
+}
+
+.button.create-user {
+  margin: 0;
+}
+
+#new_user_form {
+  margin: 0 15px;
+
+  label {
+    white-space: nowrap;
+    margin-right: 15px;
+  }
+
+  input[type="text"] {
+    width: 350px;
+  }
+}
