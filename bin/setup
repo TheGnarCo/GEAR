@@ -28,10 +28,10 @@ FileUtils.chdir APP_ROOT do
   puts "\n== Removing old logs and tempfiles =="
   system! "bin/rails log:clear tmp:clear"
 
-  puts "\n== Compile JS + CSS assets"
+  puts "\n== Compiling JS + CSS assets =="
   system! "bin/rails assets:precompile"
 
-  puts "\n== Seed Database"
+  puts "\n== Seeding database =="
   system! "bin/rails db:seed"
 
   puts "\n== Restarting application server =="

@@ -1,0 +1,21 @@
+<%= turbo_frame_tag "gnar-users" do %>
+  <table class="table-auto">
+    <thead class="border-b bg-orange-500">
+      <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+        First Name
+      </th>
+
+      <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+        Last Name
+      </th>
+
+      <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+        Email
+      </th>
+    </thead class="border-b">
+
+    <tbody class="gnar-users">
+      <%= render @users %>
+    </tbody>
+  </table>
+<% end %>
