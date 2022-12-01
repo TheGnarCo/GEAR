@@ -3,7 +3,7 @@ FactoryBot.define do
     approximate_purchase_date { Date.new(2022, 7, 21) }
     asset_type { "laptop" }
     mac_address { Faker::Internet.unique.mac_address }
-    sequence(:model_number) { |n| "#{Faker::Number.number(digits: 9)}#{n}" }
+    model_number {Faker::Alphanumeric.alphanumeric(number: 10) }
     serial_number { Faker::Device.unique.serial }
     user
   end

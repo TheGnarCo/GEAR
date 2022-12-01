@@ -31,10 +31,6 @@ form {
   margin-bottom: 15px;
 }
 
-label {
-  font-family: $body-font;
-}
-
 input[type="text"] {
   background: transparent;
   border: none;
@@ -61,7 +57,6 @@ input[type="text"] {
 
     .error-msg {
       list-style: none;
-      font-family: $body-font;
       margin-top: 10px;
 
       &:first-child {
