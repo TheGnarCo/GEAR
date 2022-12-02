@@ -5,6 +5,8 @@ ruby "3.1.2"
 
 gem "awesome_print"
 gem "bootsnap", "~> 1", require: false
+gem "cssbundling-rails", "~> 1"
+gem "dartsass-rails", "~> 0"
 gem "devise", "~> 4"
 gem "jbuilder", "~> 2"
 gem "jsbundling-rails", "~> 1"
@@ -51,5 +53,3 @@ group :development do
   gem "rubocop-rspec", "~> 2"
   gem "web-console", "~> 4"
 end
-
-gem "dartsass-rails", "~> 0.4.0"
