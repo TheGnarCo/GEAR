@@ -1,31 +1,35 @@
-<%= form_with(url: gnar_users_path, id: "#{dom_id(user)}_form") do |form| %>
-  <% if user.errors.any? %>
-    <div class="text-white-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <ul>
-        <% user.errors.each do |e| %>
-          <li><%= e.full_message %></li>
-        <% end %>
-      </ul>
+<div>
+  <%= form_with(url: gnar_users_path, id: "#{dom_id(user)}_form") do |form| %>
+    <h2 class="title">Add a Gnarnian</h2>
+
+    <% if user.errors.any? %>
+      <div class="errors">
+        <ul>
+          <% user.errors.each do |e| %>
+            <li class="error-msg"><%= e.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-element">
+      <%= form.label :first_name %>
+
+      <%= form.text_field :first_name %>
     </div>
+
+    <div class="form-element">
+      <%= form.label :last_name %>
+
+      <%= form.text_field :last_name %>
+    </div>
+
+    <div class="form-element">
+      <%= form.label :email %>
+
+      <%= form.text_field :email %>
+    </div>
+
+    <%= form.submit "Send It!", class: "button special create-user" %>
   <% end %>
-
-  <div class="form-element">
-    <%= form.label :first_name %>
-
-    <%= form.text_field :first_name %>
-  </div>
-
-  <div class="form-element">
-    <%= form.label :last_name %>
-
-    <%= form.text_field :last_name %>
-  </div>
-
-  <div class="form-element">
-    <%= form.label :email %>
-
-    <%= form.text_field :email %>
-  </div>
-
-  <%= form.submit "Send It!"%>
-<% end %>
+</div>
