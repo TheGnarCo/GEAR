@@ -3,6 +3,7 @@ module Gnar
     before_action :set_users, only: [:index, :create]
 
     def index
+
     end
 
     def new
