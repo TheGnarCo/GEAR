@@ -70,10 +70,10 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     awesome_print (1.9.2)
-    axe-core-api (4.6.0)
+    axe-core-api (4.7.0)
       dumb_delegator
       virtus
-    axe-core-capybara (4.6.0)
+    axe-core-capybara (4.7.0)
       axe-core-api
       dumb_delegator
     axe-core-rspec (4.6.0)
