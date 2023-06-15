@@ -73,7 +73,7 @@ GEM
     axe-core-api (4.7.0)
       dumb_delegator
       virtus
-    axe-core-capybara (4.6.0)
+    axe-core-capybara (4.7.0)
       axe-core-api
       dumb_delegator
     axe-core-rspec (4.7.0)
@@ -216,7 +216,7 @@ GEM
     parser (3.2.2.3)
       ast (~> 2.4.1)
       racc
-    pg (1.4.6)
+    pg (1.5.3)
     propshaft (0.7.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
@@ -308,8 +308,10 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.29.0)
       parser (>= 3.2.1.0)
-    rubocop-capybara (2.17.1)
+    rubocop-capybara (2.18.0)
       rubocop (~> 1.41)
+    rubocop-factory_bot (2.23.1)
+      rubocop (~> 1.33)
     rubocop-performance (1.17.1)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
@@ -317,9 +319,10 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
-    rubocop-rspec (2.19.0)
+    rubocop-rspec (2.22.0)
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
+      rubocop-factory_bot (~> 2.22)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
