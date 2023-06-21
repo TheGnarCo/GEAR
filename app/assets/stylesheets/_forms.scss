@@ -3,19 +3,19 @@
 @import "util";
 
 form {
-  box-sizing: border-box;
-  box-shadow: $box-shadow;
-  padding: 15px;
   background: $gnar-yellow-light;
   border: 1px solid $gnar-yellow;
-  display: inline-block;
+  box-shadow: $box-shadow;
+  box-sizing: border-box;
   color: $slate;
+  display: inline-block;
+  padding: 15px;
 }
 
 .title {
   background: $gnar-blue;
-  color: $white;
   border: 1px solid $gnar-blue;
+  color: $white;
   font-family: $title-font;
   font-size: 16px;
   font-weight: 400;
@@ -25,9 +25,9 @@ form {
 }
 
 .form-element {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 15px;
 }
 
@@ -46,9 +46,9 @@ input[type="text"] {
 }
 
 .errors {
-  border: 1px solid $gnar-orange;
   background: $white;
-  margin: 0 0 15px 0;
+  border: 1px solid $gnar-orange;
+  margin: 0 0 15px;
   padding: 15px;
 
   ul {

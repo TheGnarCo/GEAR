@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+ruby File.read(".ruby-version")
 
 gem "awesome_print"
 gem "bootsnap", "~> 1", require: false
 gem "cssbundling-rails", "~> 1"
-gem "dartsass-rails", "~> 0"
 gem "devise", "~> 4"
 gem "jbuilder", "~> 2"
 gem "jsbundling-rails", "~> 1"
