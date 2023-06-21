@@ -1,9 +1,11 @@
-$gnar-blue: #1b2445;
-$gnar-blue-dark: darken($gnar-blue, 10%);
+@use 'sass:color';
+
+$gnar-blue: hsl(227deg 44% 19%);
+$gnar-blue-dark: color.adjust($gnar-blue, $lightness: -10%);
 $gnar-orange: #f34339;
-$gnar-orange-dark: darken($gnar-orange, 10%);
+$gnar-orange-dark: color.adjust($gnar-orange, $lightness: -10%);
 $gnar-yellow: #fcb84b;
-$gnar-yellow-light: lighten($gnar-yellow, 10%);
-$gnar-yellow-dark: darken($gnar-yellow, 10%);
+$gnar-yellow-light: color.adjust($gnar-yellow, $lightness: 10%);
+$gnar-yellow-dark: color.adjust($gnar-yellow, $lightness: -10%);
 $slate: #3c3c3c;
 $white: #fff;

@@ -47,8 +47,7 @@ jobs:
       - name: Run Ruby Tests
         run: |
           bin/setup
-          bin/rails assets:precompile
-          bundle exec rspec
+          bin/rails spec
 
       - name: Run JS Tests
         if: steps.check_files.outputs.files_exists == 'true'

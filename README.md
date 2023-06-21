@@ -2,9 +2,7 @@
 
 ## The _Gnar Employee Asset Repository_
 
-Work In Progress!
-
-a 🥇 GILD production
+### a GNIP WIP
 
 ## Getting Started
 
@@ -27,3 +25,9 @@ GEAR is automatically deployed as a result of successful checks running on `MAIN
 GEAR is currently hosted on `render.com`, and a live version (on the free tier - sorry for slow loads!) can be found [here](https://gear-sa2b.onrender.com/)!
 
 For more information, check out the [`render.yaml`](/render.yaml).
+
+## Troubleshooting
+
+> Whoa, the site looks unstyled when I run it locally!
+
+We previously precompiled the assets for reasons that no longer exist. Check your `/public` directory for an  `/assets` directory, and then delete it.

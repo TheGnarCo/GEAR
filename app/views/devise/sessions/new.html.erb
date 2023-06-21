@@ -1,9 +1,7 @@
-<div class="container flex h-screen w-auto">
-  <div class="place-self-center">
-    <%- if devise_mapping.omniauthable? %>
-      <%- resource_class.omniauth_providers.each do |provider| %>
-        <%= button_to "⚙️", omniauth_authorize_path(resource_name, provider), method: :post, data: { turbo: "false" }, class: 'text-9xl' %><br />
-      <% end %>
+<div class="session-container">
+  <%- if devise_mapping.omniauthable? %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <%= button_to "Log in to G.E.A.R.", omniauth_authorize_path(resource_name, provider), method: :post, data: { turbo: "false" }, form_class: "log-in", class: 'button log-in' %><br />
     <% end %>
-  </div>
+  <% end %>
 </div>
