@@ -1,16 +1,17 @@
-.users-layout {
+.main-layout {
   display: flex;
 }
 
-.button.add-gnarnian {
+.button.add {
   margin: 0 15px;
 }
 
-.button.create-user {
+.button.create {
   margin: 0;
 }
 
-#new_user_form {
+#new_user_form,
+#new_gnar_asset_form {
   margin: 0 15px;
 
   label {
