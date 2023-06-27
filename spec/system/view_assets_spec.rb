@@ -2,12 +2,15 @@ require "rails_helper"
 
 describe "Viewing assets" do
   before do
-    login_as(create(:user, first_name: "Miles", last_name: "Prower", email: "pete-weber@example.com"))
+    login_as(create(:user, first_name: "Miles", last_name: "Prower",
+      email: "gottagofast@example.com"))
   end
 
   it "displays a list of all assets" do
-    asset1 = create(:asset, approximate_purchase_date: Date.new(2022, 7, 20), asset_type: "laptop", mac_address: "10", model_number: "1234", serial_number: "ABC")
-    asset2 = create(:asset, approximate_purchase_date: Date.new(2023, 8, 31), asset_type: "desk", mac_address: "00", model_number: "5678", serial_number: "DEF")
+    asset1 = create(:asset, approximate_purchase_date: Date.new(2022, 7, 20), asset_type: "laptop",
+      mac_address: "10", model_number: "1234", serial_number: "ABC")
+    asset2 = create(:asset, approximate_purchase_date: Date.new(2023, 8, 31), asset_type: "desk",
+      mac_address: "00", model_number: "5678", serial_number: "DEF")
 
     visit gnar_assets_path
 

@@ -32,8 +32,8 @@ module Gnar
     private
 
     def asset_params
-      params.permit(:user_id, :asset_type, :approximate_purchase_date, :model_number, :serial_number,
-        :mac_address, :phone_number, :serial_number)
+      params.permit(:user_id, :asset_type, :approximate_purchase_date, :model_number,
+        :serial_number, :mac_address, :phone_number, :serial_number)
     end
 
     def set_assets
