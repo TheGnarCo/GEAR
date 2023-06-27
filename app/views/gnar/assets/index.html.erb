@@ -7,7 +7,5 @@
       <%= render "gnar/assets/table", assets: @assets %>
     </div>
   </div>
-  <%= turbo_frame_tag "new_asset_frame" do %>
-    <%= link_to "Add an Asset", new_gnar_asset_path, class: "button standard add" %>
-  <% end %>
+  <%= render "gnar/assets/add_asset_button" %>
 </div>
