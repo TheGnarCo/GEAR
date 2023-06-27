@@ -13,7 +13,7 @@ describe "Creating a user", js: true do
     fill_in "Last name", with: "Enticer"
     fill_in "Email", with: "lenticer@example.com"
 
-    click_on "Create Life!"
+    click_on "Send it!"
 
     expect(page).to have_text "lenticer@example.com"
   end
@@ -25,7 +25,7 @@ describe "Creating a user", js: true do
       click_on "Add a Gnarnian"
       fill_in "Email", with: ""
 
-      expect { click_on "Create Life!" }.not_to change(User, :count)
+      expect { click_on "Send it!" }.not_to change(User, :count)
       expect(page).to have_text("Email can't be blank")
     end
   end

@@ -14,7 +14,7 @@ describe "Creating an Asset", js: true do
     fill_in "Model number", with: "ABC"
     fill_in "Serial number", with: "1234"
 
-    click_on "Create Asset"
+    click_on "Send it!"
 
     expect(page).to have_text "1234"
   end
@@ -25,7 +25,7 @@ describe "Creating an Asset", js: true do
 
       click_on "Add an Asset"
 
-      expect { click_on "Create Asset" }.not_to change(Gnar::Asset, :count)
+      expect { click_on "Send it!" }.not_to change(Gnar::Asset, :count)
       expect(page).to have_text("User must exist")
       expect(page).to have_text("Serial number can't be blank")
       expect(page).to have_text("Model number can't be blank")
