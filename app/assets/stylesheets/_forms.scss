@@ -2,7 +2,7 @@
 @import "fonts";
 @import "util";
 
-form {
+form:not(.hidden) {
   background: $gnar-yellow-light;
   border: 1px solid $gnar-yellow;
   box-shadow: $box-shadow;

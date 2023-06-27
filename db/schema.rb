@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_26_155355) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_28_143311) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_26_155355) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.enum "asset_type", default: "laptop", null: false, enum_type: "asset_type_enum"
+    t.boolean "retired", default: false, null: false
     t.index ["user_id"], name: "index_assets_on_user_id"
   end
 
