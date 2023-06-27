@@ -1,7 +1,6 @@
 <div>
   <%= form_with(url: gnar_users_path, id: "#{dom_id(user)}_form") do |form| %>
     <h2 class="title">Add a Gnarnian</h2>
-
     <% if user.errors.any? %>
       <div class="errors">
         <ul>
@@ -11,25 +10,18 @@
         </ul>
       </div>
     <% end %>
-
     <div class="form-element">
       <%= form.label :first_name %>
-
       <%= form.text_field :first_name %>
     </div>
-
     <div class="form-element">
       <%= form.label :last_name %>
-
       <%= form.text_field :last_name %>
     </div>
-
     <div class="form-element">
       <%= form.label :email %>
-
       <%= form.text_field :email %>
     </div>
-
-    <%= form.submit "Send It!", class: "button special create-user" %>
+    <%= form.submit "Send it!", class: "button special create" %>
   <% end %>
 </div>

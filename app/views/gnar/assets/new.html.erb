@@ -1,0 +1,4 @@
+<%= link_to "Back to Assets", gnar_assets_path %>
+<%= turbo_frame_tag "new_asset_frame" do %>
+  <%= render "new_form", asset: @asset %>
+<% end %>

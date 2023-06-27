@@ -1,9 +1,9 @@
 require "rails_helper"
 
 describe "Creating a user", js: true do
-  before { login_as(create(:user, first_name: "Amy")) }
+  before { login_as(create(:user, first_name: "Tails")) }
 
-  it "allows a new user to be created" do
+  it "allows a new asset to be created" do
     visit gnar_users_path
 
     expect(page).not_to have_text "lenticer@example.com"

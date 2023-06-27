@@ -1,7 +1,13 @@
 <% content_for :title do %>
   Assets
 <% end %>
-
-<div>
-  <%= render "gnar/assets/table", assets: @assets %>
+<div class="main-layout">
+  <div>
+    <div>
+      <%= render "gnar/assets/table", assets: @assets %>
+    </div>
+  </div>
+  <%= turbo_frame_tag "new_asset_frame" do %>
+    <%= link_to "Add an Asset", new_gnar_asset_path, class: "button standard add" %>
+  <% end %>
 </div>

@@ -1,22 +1,24 @@
-<table>
-  <thead>
-    <th scope="col">
-      Type
-    </th>
-    <th scope="col">
-      Gnarnian
-    </th>
-    <th scope="col">
-      Model Number
-    </th>
-    <th scope="col">
-      Serial Number
-    </th>
-    <th scope="col">
-      Date of Purchase (approx)
-    </th>
-  </thead>
-  <tbody>
-    <%= render assets %>
-  </tbody>
-</table>
+<%= turbo_frame_tag "gnar-assets" do %>
+  <table>
+    <thead>
+      <th scope="col">
+        Type
+      </th>
+      <th scope="col">
+        Gnarnian
+      </th>
+      <th scope="col">
+        Model Number
+      </th>
+      <th scope="col">
+        Serial Number
+      </th>
+      <th scope="col">
+        Date of Purchase (approx)
+      </th>
+    </thead>
+    <tbody>
+      <%= render assets %>
+    </tbody>
+  </table>
+<% end %>
