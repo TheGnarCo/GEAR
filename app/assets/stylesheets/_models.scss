@@ -2,16 +2,11 @@
   display: flex;
 }
 
-.button.add {
-  margin: 0 15px;
-}
-
 .button.create {
   margin: 0;
 }
 
-.form-frame,
-#new_user_form {
+.side-frame {
   margin: 0 15px;
 
   label {
