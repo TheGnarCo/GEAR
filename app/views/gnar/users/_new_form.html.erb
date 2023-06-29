@@ -1,5 +1,5 @@
 <div>
-  <%= form_with(model: user, url: gnar_users_path, id: "#{dom_id(user)}_form") do |form| %>
+  <%= form_with(model: [:gnar, user], id: "#{dom_id(user)}_form") do |form| %>
     <h2 class="title">Add a Gnarnian</h2>
     <% if user.errors.any? %>
       <div class="errors">
