@@ -1,6 +1,7 @@
 module Gnar
   class Asset < ApplicationRecord
     belongs_to :user
+    default_scope { order(:asset_type, :approximate_purchase_date) }
 
     enum asset_type: {
       laptop: "laptop",

@@ -7,7 +7,9 @@
       <%= render "gnar/users/table", users: @users %>
     </div>
   </div>
-  <%= turbo_frame_tag "new_user_frame" do %>
-    <%= link_to "Add a Gnarnian", new_gnar_user_path, class: "button standard add" %>
-  <% end %>
+  <div class="side-frame">
+    <%= turbo_frame_tag "new_user_frame" do %>
+      <%= link_to "Add a Gnarnian", new_gnar_user_path, class: "button standard" %>
+    <% end %>
+  </div>
 </div>
