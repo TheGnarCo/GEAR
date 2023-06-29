@@ -14,4 +14,7 @@
   <td>
     <%= asset.approximate_purchase_date %>
   </td>
+  <td>
+    <%= link_to "Edit", edit_gnar_asset_path(asset), data: {"turbo_frame": "asset_form_frame"}, class: "button standard" %>
+  </td>
 </tr>

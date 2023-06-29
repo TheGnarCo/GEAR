@@ -1,6 +1,6 @@
 <div>
-  <%= form_with(url: gnar_assets_path, id: "#{dom_id(asset)}_form") do |form| %>
-    <h2 class="title">Add an Asset</h2>
+  <%= form_with(model: asset, class: 'form-frame', id: "#{dom_id(asset)}_form") do |form| %>
+    <h2 class="title"><%= asset.persisted? ? "Edit Asset ##{asset.id}" : "Add an Asset" %></h2>
     <% if asset.errors.any? %>
       <div class="errors">
         <ul>
@@ -39,5 +39,6 @@
       <%= form.text_field :serial_number %>
     </div>
     <%= form.submit "Send it!", class: "button special create" %>
+    <%= link_to "Cancel", gnar_assets_path, class: "button standard" %>
   <% end %>
 </div>
