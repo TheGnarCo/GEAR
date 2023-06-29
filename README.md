@@ -22,9 +22,7 @@ Once you have the `config/master.key`, you can run `bin/rails credentials:edit` 
 
 GEAR is automatically deployed as a result of successful checks running on `MAIN` following a merge.
 
-GEAR is currently hosted on `render.com`, and a live version (on the free tier - sorry for slow loads!) can be found [here](https://gear-sa2b.onrender.com/)!
-
-For more information, check out the [`render.yaml`](/render.yaml).
+GEAR is currently hosted on `heroku`, and a live version (on the free tier - sorry for slow loads!) can be found [here](https://gnar-gear.herokuapp.com/)!
 
 ## Troubleshooting
 
