@@ -1,5 +1,5 @@
 <%= turbo_frame_tag "gnar-assets" do %>
-  <table>
+  <table id="assets">
     <thead>
       <th scope="col">
         Type
@@ -19,9 +19,41 @@
       <th scope="col">
         Edit
       </th>
+      <th scope="col">
+        Retire
+      </th>
     </thead>
     <tbody>
       <%= render assets %>
+    </tbody>
+  </table>
+  <h2> Retired Assets</h2>
+  <table id="retired-assets">
+    <thead>
+      <th scope="col">
+        Type
+      </th>
+      <th scope="col">
+        Gnarnian
+      </th>
+      <th scope="col">
+        Model Number
+      </th>
+      <th scope="col">
+        Serial Number
+      </th>
+      <th scope="col">
+        Date of Purchase (approx)
+      </th>
+      <th scope="col">
+        Edit
+      </th>
+      <th scope="col">
+        UnRetire
+      </th>
+    </thead>
+    <tbody>
+      <%= render retired_assets %>
     </tbody>
   </table>
 <% end %>

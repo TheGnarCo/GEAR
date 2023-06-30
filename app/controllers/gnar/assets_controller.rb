@@ -57,11 +57,12 @@ module Gnar
 
     def asset_params
       params.require(:gnar_asset).permit(:user_id, :asset_type, :approximate_purchase_date,
-        :model_number, :serial_number, :mac_address, :phone_number, :serial_number)
+        :model_number, :serial_number, :mac_address, :phone_number, :serial_number, :retired)
     end
 
     def set_assets
-      @assets = Asset.all.includes(:user)
+      @assets = Asset.includes(:user).where(retired: false)
+      @retired_assets = Asset.includes(:user).where(retired: true)
     end
   end
 end

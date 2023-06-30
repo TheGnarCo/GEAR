@@ -17,4 +17,10 @@
   <td>
     <%= link_to "Edit", edit_gnar_asset_path(asset), data: {"turbo_frame": "asset_form_frame"}, class: "button standard" %>
   </td>
+  <td>
+    <%= form_for asset, html: {class: "hidden"} do |f| %>
+      <%= f.hidden_field :retired, value: !asset.retired? %>
+      <%= f.submit asset.retired? ? "UnRetire" : "Retire", class: 'button standard' %>
+    <% end %>
+  </td>
 </tr>
