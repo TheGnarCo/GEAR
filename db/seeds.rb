@@ -18,8 +18,8 @@ end
 Gnar::Asset.first_or_create(
   approximate_purchase_date: Date.new(2022, 7, 21),
   asset_type: "laptop",
-  mac_address: Faker::Internet.uniq.mac_address,
+  mac_address: Faker::Internet.unique.mac_address,
   model_number: Faker::Number.number(digits: 10),
-  serial_number: Faker::Device.uniq.serial,
+  serial_number: Faker::Device.unique.serial,
   user_id: User.ids.sample,
 )
