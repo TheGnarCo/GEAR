@@ -13,7 +13,7 @@
     "sass": "^1.63.6"
   },
   "devDependencies": {
-    "stylelint": "^15.10.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard-scss": "^10.0.0",
     "stylelint-order": "^6.0.3"
   }
