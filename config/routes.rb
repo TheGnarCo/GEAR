@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     get "sign_out", to: "devise/sessions#destroy", as: :destroy_user_session
   end
 
+  if Rails.env.development?
+    get :dev_sign_in, to: "dev_sign_in#index", as: :dev_sign_in
+  end
+
   namespace :gnar do
     resources :assets
     resources :users
