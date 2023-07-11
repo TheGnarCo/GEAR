@@ -3,5 +3,8 @@
     <%- resource_class.omniauth_providers.each do |provider| %>
       <%= button_to "Log in to G.E.A.R.", omniauth_authorize_path(resource_name, provider), method: :post, data: { turbo: "false" }, form_class: "log-in", class: 'button log-in' %><br />
     <% end %>
+    <% if Rails.env.development? %>
+      <%= button_to "Log in to G.E.A.R. (Dev)", dev_sign_in_path, method: :get, form_class: "log-in", class: 'button log-in' %><br />
+    <% end %>
   <% end %>
 </div>

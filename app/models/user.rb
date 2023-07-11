@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   devise :registerable, :omniauthable, omniauth_providers: [:google_oauth2]
-
   has_many :assets, dependent: :nullify, class_name: "Gnar::Asset"
 
   validates :email, presence: true, uniqueness: true
