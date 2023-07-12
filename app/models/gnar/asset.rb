@@ -25,7 +25,7 @@ module Gnar
 
     def broadcast_updates
       Turbo::StreamsChannel.broadcast_replace_to(
-        Gnar::Asset.active.first,
+        Gnar::Asset.first,
         target: "gnar-assets",
         partial: "gnar/assets/table",
         locals: { assets: Asset.active.all, retired_assets: Asset.retired.all },
