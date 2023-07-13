@@ -1,0 +1,9 @@
+<%= turbo_stream.replace "gnar-users" do %>
+  <%= render "gnar/users/table", users: @users %>
+<% end %>
+<%= turbo_stream.replace "#{dom_id(@user)}_form" do %>
+  <%= render "new_form", user: @user %>
+<% end %>
+<%= turbo_stream.replace "user_form_frame" do %>
+  <%= render "add_user_button" %>
+<% end %>

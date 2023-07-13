@@ -1,21 +1,16 @@
 <%= turbo_frame_tag "gnar-users" do %>
   <table>
     <thead>
-      <th scope="col">
-        First Name
-      </th>
-
-      <th scope="col">
-        Last Name
-      </th>
-
-      <th scope="col">
-        Email
-      </th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Actions</th>
     </thead>
 
     <tbody>
-      <%= render users %>
+      <% users.each do |user| %>
+        <%= render "gnar/users/user", user: user %>
+      <% end %>
     </tbody>
   </table>
 <% end %>
