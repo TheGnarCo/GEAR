@@ -6,7 +6,7 @@ describe "Updating a User", js: true do
     login_as(user)
   end
 
-  it "allows an existing asset to be updated" do
+  it "allows an existing user to be updated" do
     visit gnar_users_path
 
     click_on "Edit"
