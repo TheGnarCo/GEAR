@@ -68,8 +68,8 @@ module Gnar
         @assets = @user.assets.active
         @retired_assets = @user.assets.retired
       else
-        @assets = Asset.active
-        @retired_assets = Asset.retired
+        @assets = Asset.includes(:user).active
+        @retired_assets = Asset.includes(:user).retired
       end
     end
   end
