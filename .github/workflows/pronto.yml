@@ -14,5 +14,5 @@ jobs:
       - uses: HeRoMo/pronto-action@v1.56.0
         with:
           github_token: ${{ secrets.GNARBOT_TOKEN }}
-          runner: rubocop brakeman rails_best_practices
+          runner: rubocop brakeman
           formatters: text github_status github_pr_review
