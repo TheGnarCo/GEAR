@@ -6,11 +6,8 @@
       <th scope="col">Email</th>
       <th scope="col">Actions</th>
     </thead>
-
     <tbody>
-      <% users.each do |user| %>
-        <%= render "gnar/users/user", user: user %>
-      <% end %>
+      <%= render users %>
     </tbody>
   </table>
 <% end %>
