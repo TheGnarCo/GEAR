@@ -24,7 +24,7 @@ module Gnar
         else
           format.turbo_stream do
             render turbo_stream: turbo_stream.replace("#{helpers.dom_id(@user)}_form",
-              partial: "new_form",
+              partial: "user_form",
               locals: { user: @user })
           end
 
@@ -44,7 +44,7 @@ module Gnar
         else
           format.turbo_stream do
             render turbo_stream: turbo_stream.replace("#{helpers.dom_id(@user)}_form",
-              partial: "new_form",
+              partial: "user_form",
               locals: { user: @user })
           end
 
