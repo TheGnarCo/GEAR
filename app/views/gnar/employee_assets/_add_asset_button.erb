@@ -1,0 +1,4 @@
+<%= turbo_frame_tag "asset_form_frame" do %>
+  <%= link_to "Add an Asset", @user.present? ? new_gnar_user_employee_asset_path(@user)
+ : new_gnar_employee_asset_path, class: "button standard" %>
+<% end %>

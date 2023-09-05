@@ -3,12 +3,12 @@ require "rails_helper"
 describe "Retire an Asset", js: true do
   before do
     user = create(:user, first_name: "Amy")
-    create(:asset, serial_number: "ZZZZ")
+    create(:employee_asset, serial_number: "ZZZZ")
     login_as(user)
   end
 
   it "allows an asset to be retired and unretired" do
-    visit gnar_assets_path
+    visit gnar_employee_assets_path
 
     within("#assets") do
       expect(page).to have_text("ZZZZ")

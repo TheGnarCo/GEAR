@@ -55,7 +55,9 @@
       </th>
     </thead>
     <tbody>
-      <%= render retired_assets %>
+      <% retired_assets.each do |asset|%>
+        <%= render AssetRowComponent.new(asset, @user) %>
+      <% end %>
     </tbody>
   </table>
 <% end %>

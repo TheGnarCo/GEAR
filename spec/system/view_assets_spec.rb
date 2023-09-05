@@ -7,12 +7,12 @@ describe "Viewing assets" do
   end
 
   it "displays a list of all assets" do
-    asset1 = create(:asset, approximate_purchase_date: Date.new(2022, 7, 20), asset_type: "laptop",
+    asset1 = create(:employee_asset, approximate_purchase_date: Date.new(2022, 7, 20), asset_type: "laptop",
       mac_address: "10", model_number: "1234", serial_number: "ABC")
-    asset2 = create(:asset, approximate_purchase_date: Date.new(2023, 8, 31), asset_type: "desk",
+    asset2 = create(:employee_asset, approximate_purchase_date: Date.new(2023, 8, 31), asset_type: "desk",
       mac_address: "00", model_number: "5678", serial_number: "DEF")
 
-    visit gnar_assets_path
+    visit gnar_employee_assets_path
 
     assets = all(".asset")
     expect(assets[0]).to have_text asset1.asset_type

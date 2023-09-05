@@ -4,7 +4,7 @@ describe "Creating an Asset", js: true do
   before { login_as(create(:user, first_name: "Amy")) }
 
   it "allows a new asset to be created" do
-    visit gnar_assets_path
+    visit gnar_employee_assets_path
 
     click_on "Add an Asset"
     select "laptop", from: "Asset type"
@@ -21,11 +21,11 @@ describe "Creating an Asset", js: true do
 
   context "if the data is invalid" do
     it "displays an error message" do
-      visit gnar_assets_path
+      visit gnar_employee_assets_path
 
       click_on "Add an Asset"
 
-      expect { click_on "Send it!" }.not_to change(Gnar::Asset, :count)
+      expect { click_on "Send it!" }.not_to change(EmployeeAsset, :count)
       expect(page).to have_text("User must exist")
       expect(page).to have_text("Serial number can't be blank")
       expect(page).to have_text("Model number can't be blank")

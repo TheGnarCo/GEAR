@@ -1,10 +1,10 @@
 <div>
-  <%= form_with(model: [user, asset], url:, class: 'form-frame', id: "#{dom_id(asset)}_form") do |form| %>
+  <%= form_with(model: [:gnar, user, employee_asset], class: 'form-frame', id: "#{dom_id(employee_asset)}_form") do |form| %>
     <h2 class="title"><%= title %></h2>
-    <% if asset.errors.any? %>
+    <% if employee_asset.errors.any? %>
       <div class="errors">
         <ul>
-          <% asset.errors.each do |e| %>
+          <% employee_asset.errors.each do |e| %>
             <li class="error-msg"><%= e.full_message %></li>
           <% end %>
         </ul>
@@ -16,7 +16,7 @@
     </div>
     <div class="form-element">
       <%= form.label :asset_type %>
-      <%= form.select :asset_type, Gnar::Asset.asset_types, include_blank: true %>
+      <%= form.select :asset_type, EmployeeAsset.asset_types, include_blank: true %>
     </div>
     <div class="form-element">
       <%= form.label :approximate_purchase_date %>
@@ -39,6 +39,6 @@
       <%= form.text_field :serial_number %>
     </div>
     <%= form.submit "Send it!", class: "button special create" %>
-    <%= link_to "Cancel", gnar_assets_path, class: "button standard" %>
+    <%= link_to "Cancel", gnar_employee_assets_path, class: "button standard" %>
   <% end %>
 </div>

@@ -3,7 +3,7 @@ require "rails_helper"
 describe "Updating a user's Assets", js: true do
   before do
     user = create(:user, first_name: "Amy")
-    create(:asset, user:, serial_number: "ZZZZ")
+    create(:employee_asset, user:, serial_number: "ZZZZ")
     login_as(user)
     visit gnar_user_path(user)
   end

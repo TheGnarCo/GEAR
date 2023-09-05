@@ -1,14 +1,14 @@
 require "rails_helper"
 
-RSpec.describe Gnar::Asset do
+RSpec.describe EmployeeAsset do
   describe "associations" do
     it { is_expected.to belong_to(:user) }
   end
 
   describe "scopes" do
     before do
-      create(:asset, model_number: "retired", retired: true)
-      create(:asset, model_number: "active", retired: false)
+      create(:employee_asset, model_number: "retired", retired: true)
+      create(:employee_asset, model_number: "active", retired: false)
     end
 
     describe "active" do
@@ -37,7 +37,7 @@ RSpec.describe Gnar::Asset do
   end
 
   describe "enums" do
-    subject(:asset) { create(:asset) }
+    subject(:asset) { create(:employee_asset) }
 
     enum_values = {
       laptop: "laptop",

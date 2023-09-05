@@ -1,8 +1,8 @@
 <%= turbo_stream.replace "gnar-assets" do %>
-  <%= render "gnar/assets/table", assets: @assets, retired_assets: @retired_assets %>
+  <%= render "gnar/employee_assets/table", assets: @assets, retired_assets: @retired_assets %>
 <% end %>
 <%= turbo_stream.replace "#{dom_id(@asset)}_form" do %>
-  <%= render "form", asset: @asset %>
+  <%= render "form" %>
 <% end %>
 <%= turbo_stream.replace "asset_form_frame" do %>
   <%= render "add_asset_button" %>

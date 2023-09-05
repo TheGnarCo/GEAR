@@ -15,7 +15,7 @@ return unless Rails.env.development?
     .first_or_create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
 end
 
-Gnar::Asset.first_or_create(
+EmployeeAsset.first_or_create(
   approximate_purchase_date: Date.new(2022, 7, 21),
   asset_type: "laptop",
   mac_address: Faker::Internet.unique.mac_address,

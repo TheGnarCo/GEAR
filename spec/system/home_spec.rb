@@ -12,8 +12,8 @@ RSpec.describe "Home Page" do
   context "with authenticated visit" do
     let!(:user) { create(:user) }
     let!(:other_user) { create(:user) }
-    let!(:asset_one) { create(:asset, asset_type: "desk", user:) }
-    let!(:asset_two) { create(:asset, user: other_user) }
+    let!(:asset_one) { create(:employee_asset, asset_type: "desk", user:) }
+    let!(:asset_two) { create(:employee_asset, user: other_user) }
 
     before do
       login_as(user)

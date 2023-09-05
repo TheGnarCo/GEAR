@@ -1,27 +1,15 @@
 class AssetFormComponent < ViewComponent::Base
-  attr_reader :asset, :user
+  attr_reader :employee_asset, :user
 
-  def initialize(asset, user)
+  def initialize(employee_asset, user)
     super
     @user = user
-    @asset = asset
+    @employee_asset = employee_asset
   end
 
   def title
-    return "Add an Asset" if asset.new_record?
+    return "Add an Asset" if employee_asset.new_record?
 
-    "Edit Asset #{asset.id}"
-  end
-
-  def url
-    if user.present?
-      return gnar_user_assets_path(user) if asset.new_record?
-
-      gnar_user_asset_path(user, asset)
-    else
-      return gnar_assets_path if asset.new_record?
-
-      gnar_asset_path(asset)
-    end
+    "Edit Asset #{employee_asset.id}"
   end
 end

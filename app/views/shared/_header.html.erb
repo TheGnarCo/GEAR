@@ -4,11 +4,8 @@
       <li class="home-link">
         <%= link_to "", root_path %>
       </li>
-
-      <%= render "shared/nav_item", url: gnar_assets_path, text: "Assets"%>
-
+      <%= render "shared/nav_item", url: gnar_employee_assets_path, text: "Assets"%>
       <%= render "shared/nav_item", url: gnar_users_path, text: "Gnarnians"%>
-
       <%= render "shared/nav_item", url: destroy_user_session_path, text: "Sign Out" %>
     </ul>
   </nav>

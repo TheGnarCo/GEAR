@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_28_143311) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_05_172852) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_143311) do
   # Note that some types may not work with other database engines. Be careful if changing database.
   create_enum "asset_type_enum", ["laptop", "display", "keyboard", "mouse", "power supply", "desk", "chair"]
 
-  create_table "assets", force: :cascade do |t|
+  create_table "employee_assets", force: :cascade do |t|
     t.date "approximate_purchase_date", null: false
     t.string "mac_address"
     t.string "model_number", null: false
@@ -29,7 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_143311) do
     t.datetime "updated_at", null: false
     t.enum "asset_type", default: "laptop", null: false, enum_type: "asset_type_enum"
     t.boolean "retired", default: false, null: false
-    t.index ["user_id"], name: "index_assets_on_user_id"
+    t.index ["user_id"], name: "index_employee_assets_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,5 +43,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_28_143311) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  add_foreign_key "assets", "users"
+  add_foreign_key "employee_assets", "users"
 end

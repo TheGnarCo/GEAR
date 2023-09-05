@@ -1,27 +1,28 @@
 class AssetRowComponent < ViewComponent::Base
-  attr_reader :asset, :user
+  attr_reader :employee_asset, :user
 
-  delegate :asset_type, :model_number, :serial_number, :approximate_purchase_date, to: :asset
+  delegate :asset_type, :model_number, :serial_number, :approximate_purchase_date,
+    to: :employee_asset
 
-  def initialize(asset, user)
+  def initialize(employee_asset, user)
     super
     @user = user
-    @asset = asset
+    @employee_asset = employee_asset
   end
 
   def edit_asset_path
-    return edit_gnar_user_asset_path(user, asset) if user.present?
+    return edit_gnar_user_employee_asset_path(user, employee_asset) if user.present?
 
-    edit_gnar_asset_path(asset)
+    edit_gnar_employee_asset_path(employee_asset)
   end
 
   def retire_asset_path
-    return gnar_user_asset_path(user, asset) if user.present?
+    return gnar_user_employee_asset_path(user, employee_asset) if user.present?
 
-    gnar_asset_path(asset)
+    gnar_employee_asset_path(employee_asset)
   end
 
   def email
-    asset.user.email
+    employee_asset.user.email
   end
 end

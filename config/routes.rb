@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "gnar/assets#index"
+  root "gnar/employee_assets#index"
 
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
@@ -13,9 +13,9 @@ Rails.application.routes.draw do
   end
 
   namespace :gnar do
-    resources :assets
+    resources :employee_assets
     resources :users do
-      resources :assets
+      resources :employee_assets
     end
   end
 end
