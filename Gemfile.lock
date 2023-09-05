@@ -172,6 +172,7 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.5)
     minitest (5.19.0)
+    more_possessive (1.0.2)
     msgpack (1.7.1)
     multi_xml (0.6.0)
     net-imap (0.3.7)
@@ -361,6 +362,10 @@ GEM
     unicode-display_width (2.4.2)
     uniform_notifier (1.16.0)
     version_gem (1.1.3)
+    view_component (3.5.0)
+      activesupport (>= 5.2.0, < 8.0)
+      concurrent-ruby (~> 1.0)
+      method_source (~> 1.0)
     virtus (2.0.0)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
@@ -407,6 +412,7 @@ DEPENDENCIES
   jsbundling-rails (~> 1)
   launchy (~> 2)
   lol_dba (~> 2)
+  more_possessive (~> 1.0)
   okcomputer (~> 1)
   omniauth-google-oauth2 (~> 1)
   omniauth-rails_csrf_protection (~> 1)
@@ -429,6 +435,7 @@ DEPENDENCIES
   stimulus-rails (~> 1)
   turbo-rails (~> 1)
   tzinfo-data
+  view_component
   web-console (~> 4)
   webdrivers (~> 5.3)
 

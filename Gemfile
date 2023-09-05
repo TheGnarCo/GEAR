@@ -19,6 +19,7 @@ gem "redis", "~> 5"
 gem "stimulus-rails", "~> 1"
 gem "turbo-rails", "~> 1"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "view_component"
 
 group :development, :test do
   gem "axe-core-capybara", "~> 4"
@@ -52,3 +53,5 @@ group :development do
   gem "rubocop-rspec", "~> 2"
   gem "web-console", "~> 4"
 end
+
+gem "more_possessive", "~> 1.0"

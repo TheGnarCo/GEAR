@@ -24,7 +24,9 @@
       </th>
     </thead>
     <tbody>
-      <%= render assets %>
+      <% assets.each do |asset|%>
+        <%= render AssetRowComponent.new(asset, @user) %>
+      <% end %>
     </tbody>
   </table>
   <h2> Retired Assets</h2>

@@ -14,4 +14,12 @@ class User < ApplicationRecord
       email:,
     )
   end
+
+  def name
+    if first_name.present?
+      "#{first_name} #{last_name}"
+    else
+      email
+    end
+  end
 end

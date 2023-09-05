@@ -1,7 +1,13 @@
 <tr class="user">
-  <td><%= user.first_name%></td>
-  <td><%= user.last_name %></td>
-  <td><%= user.email %></td>
+  <td>
+    <%= user.first_name%>
+  </td>
+  <td>
+    <%= user.last_name %>
+  </td>
+  <td>
+    <%= link_to user.email, gnar_user_path(user), data: { turbo: false } %>
+  </td>
   <td>
     <%= link_to "Edit", edit_gnar_user_path(user), data: {"turbo_frame": "user_form_frame"}, class: "button standard" %>
   </td>

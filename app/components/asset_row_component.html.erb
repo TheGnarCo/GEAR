@@ -1,0 +1,26 @@
+<tr class="asset">
+  <td>
+    <%= asset_type %>
+  </td>
+  <td>
+    <%= link_to email, gnar_user_path(@asset.user), data: { turbo: false } %>
+  </td>
+  <td>
+    <%= model_number %>
+  </td>
+  <td>
+    <%= serial_number %>
+  </td>
+  <td>
+    <%= approximate_purchase_date %>
+  </td>
+  <td>
+    <%= link_to "Edit", edit_asset_path, data: {"turbo_frame": "asset_form_frame"}, class: "button standard" %>
+  </td>
+  <td>
+    <%= form_for asset, url: retire_asset_path, html: {class: "hidden"} do |f| %>
+      <%= f.hidden_field :retired, value: !@asset.retired? %>
+      <%= f.submit @asset.retired? ? "UnRetire" : "Retire", class: 'button standard' %>
+    <% end %>
+  </td>
+</tr>

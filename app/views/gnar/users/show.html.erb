@@ -1,0 +1,13 @@
+<% content_for :title do %>
+  <%= @user.name.possessive %> Assets
+<% end %>
+<div class="main-layout">
+  <div>
+    <div>
+      <%= render "gnar/assets/table", assets: @user.assets.active, retired_assets: @user.assets.retired %>
+    </div>
+  </div>
+  <div class="side-frame">
+    <%= render "gnar/assets/add_asset_button" %>
+  </div>
+</div>

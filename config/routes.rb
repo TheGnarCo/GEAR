@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   namespace :gnar do
     resources :assets
-    resources :users
+    resources :users do
+      resources :assets
+    end
   end
 end
