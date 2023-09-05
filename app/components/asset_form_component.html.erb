@@ -1,5 +1,5 @@
 <div>
-  <%= form_with(model: [user, asset],  class: 'form-frame', id: "#{dom_id(asset)}_form") do |form| %>
+  <%= form_with(model: [user, asset], url:, class: 'form-frame', id: "#{dom_id(asset)}_form") do |form| %>
     <h2 class="title"><%= title %></h2>
     <% if asset.errors.any? %>
       <div class="errors">
