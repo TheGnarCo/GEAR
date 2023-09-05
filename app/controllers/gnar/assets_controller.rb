@@ -61,10 +61,8 @@ module Gnar
     end
 
     def set_assets
-      active_user_id = params[:active_user_id] ||
-                       (params[:gnar_asset] ? params[:gnar_asset][:active_user_id] : nil)
-      if active_user_id.present?
-        @user = User.find(active_user_id)
+      if params[:user_id].present?
+        @user = User.find(params[:user_id])
         @assets = @user.assets.active
         @retired_assets = @user.assets.retired
       else
