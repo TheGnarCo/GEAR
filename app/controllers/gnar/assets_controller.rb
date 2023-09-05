@@ -6,7 +6,7 @@ module Gnar
     end
 
     def new
-      @asset = Asset.new
+      @asset = Asset.new(user: @user)
     end
 
     def edit
@@ -61,8 +61,16 @@ module Gnar
     end
 
     def set_assets
-      @assets = Asset.includes(:user).where(retired: false)
-      @retired_assets = Asset.includes(:user).where(retired: true)
+      active_user_id = params[:active_user_id] ||
+                       (params[:gnar_asset] ? params[:gnar_asset][:active_user_id] : nil)
+      if active_user_id.present?
+        @user = User.find(active_user_id)
+        @assets = @user.assets.active
+        @retired_assets = @user.assets.retired
+      else
+        @assets = Asset.active
+        @retired_assets = Asset.retired
+      end
     end
   end
 end

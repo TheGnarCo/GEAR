@@ -3,7 +3,7 @@
     <%= asset.asset_type %>
   </td>
   <td>
-    <%= asset.user.email %>
+    <%= link_to asset.user.email, gnar_user_path(asset.user), data: { turbo: false } %>
   </td>
   <td>
     <%= asset.model_number %>
@@ -15,11 +15,12 @@
     <%= asset.approximate_purchase_date %>
   </td>
   <td>
-    <%= link_to "Edit", edit_gnar_asset_path(asset), data: {"turbo_frame": "asset_form_frame"}, class: "button standard" %>
+    <%= link_to "Edit", edit_gnar_asset_path(asset, active_user_id: @user), data: {"turbo_frame": "asset_form_frame"}, class: "button standard" %>
   </td>
   <td>
     <%= form_for asset, html: {class: "hidden"} do |f| %>
       <%= f.hidden_field :retired, value: !asset.retired? %>
+      <%= f.hidden_field :active_user_id, value: @user&.id %>
       <%= f.submit asset.retired? ? "UnRetire" : "Retire", class: 'button standard' %>
     <% end %>
   </td>

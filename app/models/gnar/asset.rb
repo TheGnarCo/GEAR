@@ -2,6 +2,8 @@ module Gnar
   class Asset < ApplicationRecord
     belongs_to :user
     default_scope { order(:asset_type, :approximate_purchase_date) }
+    scope :retired, -> { includes(:user).where(retired: true) }
+    scope :active, -> { includes(:user).where(retired: false) }
 
     enum asset_type: {
       laptop: "laptop",

@@ -12,7 +12,7 @@
     <% end %>
     <div class="form-element">
       <%= form.label :user_id, "User" %>
-      <%= form.select :user_id, User.all.map { |u| [u.email, u.id]}, include_blank: true %>
+      <%= form.select :user_id, User.all.map { |u| [u.email, u.id]}, include_blank: true  %>
     </div>
     <div class="form-element">
       <%= form.label :asset_type %>
@@ -38,6 +38,7 @@
       <%= form.label :serial_number %>
       <%= form.text_field :serial_number %>
     </div>
+    <%= form.hidden_field :active_user_id, value: @user&.id %>
     <%= form.submit "Send it!", class: "button special create" %>
     <%= link_to "Cancel", gnar_assets_path, class: "button standard" %>
   <% end %>

@@ -52,3 +52,5 @@ group :development do
   gem "rubocop-rspec", "~> 2"
   gem "web-console", "~> 4"
 end
+
+gem "more_possessive", "~> 1.0"
