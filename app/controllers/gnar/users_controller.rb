@@ -1,12 +1,16 @@
 module Gnar
   class UsersController < AuthenticatedController
-    before_action :set_users, only: [:index, :create]
+    before_action :set_users, only: [:index, :create, :update]
 
     def index
     end
 
     def new
       @user = User.new
+    end
+
+    def edit
+      @user = User.find(params[:id])
     end
 
     def create
@@ -20,11 +24,31 @@ module Gnar
         else
           format.turbo_stream do
             render turbo_stream: turbo_stream.replace("#{helpers.dom_id(@user)}_form",
-              partial: "new_form",
+              partial: "user_form",
               locals: { user: @user })
           end
 
           format.html { render :new, status: :unprocessable_entity }
+        end
+      end
+    end
+
+    def update
+      @user = User.find(params[:id])
+
+      respond_to do |format|
+        if @user.update(user_params)
+          format.turbo_stream
+
+          format.html { redirect_to gnar_user_path(@user), notice: "User created!" }
+        else
+          format.turbo_stream do
+            render turbo_stream: turbo_stream.replace("#{helpers.dom_id(@user)}_form",
+              partial: "user_form",
+              locals: { user: @user })
+          end
+
+          format.html { render :edit, status: :unprocessable_entity }
         end
       end
     end

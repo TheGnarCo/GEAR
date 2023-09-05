@@ -1,15 +1,16 @@
 <% content_for :title do %>
   Gnarnians
 <% end %>
+
 <div class="main-layout">
   <div>
     <div>
-      <%= render "gnar/users/table", users: @users %>
+      <%= turbo_frame_tag "gnar-users" do %>
+        <%= render "gnar/users/table", users: @users %>
+      <% end %>
     </div>
   </div>
   <div class="side-frame">
-    <%= turbo_frame_tag "new_user_frame" do %>
-      <%= link_to "Add a Gnarnian", new_gnar_user_path, class: "button standard" %>
-    <% end %>
+    <%= render "gnar/users/add_user_button" %>
   </div>
 </div>
