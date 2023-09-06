@@ -29,3 +29,9 @@ GEAR is currently hosted on `heroku`, and a live version (on the free tier - sor
 > Whoa, the site looks unstyled when I run it locally!
 
 We previously precompiled the assets for reasons that no longer exist. Check your `/public` directory for an  `/assets` directory, and then delete it.
+
+## About The Gnar Company
+
+![The Gnar Company](https://avatars0.githubusercontent.com/u/17011419?s=100&v=4)
+
+If you’re ready to dream it, we’re ready to build it. The Gnar is a custom software company ready to tackle your biggest challenges. Visit [The Gnar Company website](https://www.thegnar.com/) to learn more about us or [contact us](https://www.thegnar.com/contact) to see how we can help design and develop your product.
